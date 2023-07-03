@@ -6,6 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  sitename = 'The Will Will Web';
+  sitename = 'Hello World';
+  sitelink = 'http://blog.miniasp.com/';
+  sitelogo = '/assets/images/logo.png';
   subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
+
+  constructor() {
+    setTimeout(() => {
+      this.sitename = 'The Will Will Web';
+    }, 3000);
+  }
 }
