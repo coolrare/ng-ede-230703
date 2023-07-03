@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-article',
@@ -6,9 +6,14 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent {
-  @Input()
-  i = 0;
+  @Input() i = 0;
 
-  @Input()
-  item: any = {};
+  @Input() item: any = {};
+
+  @Output() delete = new EventEmitter<number>();
+
+  deleteArticle() {
+    this.delete.emit(this.item.id);
+  }
+
 }

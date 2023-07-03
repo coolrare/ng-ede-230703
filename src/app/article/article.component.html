@@ -22,6 +22,8 @@
           >{{item.category}}</a
         ></span
       >
+
+      <button (click)="deleteArticle()">刪除</button>
     </div>
   </header>
   <section class="post-body text" [innerHTML]="item.summary">

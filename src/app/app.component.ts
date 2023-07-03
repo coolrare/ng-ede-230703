@@ -13,6 +13,10 @@ export class AppComponent {
     this.keyword = value;
   }
 
+  doDelete(id: number) {
+    console.log(`Delete article id: ${id}`);
+  }
+
   data = [
     {
       id: 1,
