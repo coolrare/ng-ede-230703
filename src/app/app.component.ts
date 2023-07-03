@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './data.service';
 import { Article } from './article/article.component';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -24,14 +25,12 @@ export class AppComponent implements OnInit {
     this.datasvc.deleteArticle(id);
   }
 
-  data: Article[] = [];
+  data$: Observable<Article[]> = of([]);
 
   ngOnInit(): void {
     console.log('ngOnInit');
 
-    this.datasvc.getArticles().subscribe(result => {
-      this.data = result;
-    });
+    this.data$ = this.datasvc.getArticles();
   }
 
 }
