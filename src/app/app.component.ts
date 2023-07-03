@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   keyword = 'ng-ede-230703';
+
+  doSearch(value: string) {
+    console.log(`Search keyword: ${value}`);
+    this.keyword = value;
+  }
 }
