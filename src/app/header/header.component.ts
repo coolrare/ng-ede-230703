@@ -10,10 +10,20 @@ export class HeaderComponent {
   sitelink = 'http://blog.miniasp.com/';
   sitelogo = '/assets/images/logo.png';
   subtitle = '記載著 <u>Will</u> 在網路世界的學習心得與技術分享';
+  counter = 0;
 
   constructor() {
     setTimeout(() => {
       this.sitename = 'The Will Will Web';
     }, 3000);
+  }
+
+  incCounter($event: MouseEvent) {
+    console.log($event);
+    if ($event.ctrlKey) {
+      this.counter--;
+    } else {
+      this.counter++;
+    }
   }
 }

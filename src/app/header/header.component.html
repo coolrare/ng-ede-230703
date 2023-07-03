@@ -1,3 +1,5 @@
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
 <!-- Header START -->
 <header class="header">
   <div class="navbar navbar-inverse" role="navigation">
@@ -34,10 +36,11 @@
         [attr.data-test-id]="'sitelogo'"
         class="pull-left logo"
         alt="The Will Will Web"
+        (click)="incCounter($event)"
       />
 
       <div class="pull-left">
-        <h1><a [href]="sitelink">{{sitename}}</a></h1>
+        <h1><a [href]="sitelink">{{sitename}}</a> {{counter}}</h1>
         <h3 [innerHTML]="subtitle"></h3>
       </div>
 
