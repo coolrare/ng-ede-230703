@@ -38,8 +38,8 @@
       />
 
       <div class="pull-left">
-        <h1><a [href]="sitelink">{{sitename}}</a> {{counter}}</h1>
-        <h3 [innerHTML]="subtitle"></h3>
+        <h1><a [href]="sitelink" [class.highlight]="counter % 2 === 1">{{sitename}}</a> {{counter}}</h1>
+        <h3 [innerHTML]="subtitle" [style.font-size.px]="counter + 14"></h3>
       </div>
 
       <div id="social-icons" class="pull-right social-icon">
