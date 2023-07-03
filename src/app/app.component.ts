@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     console.log(`Search keyword: ${value}`);
     this.keyword = value;
 
-    // this.data = this.datasvc.searchArticle(value);
+    this.data$ = this.datasvc.searchArticle(value);
   }
 
   doDelete(id: number) {
