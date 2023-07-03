@@ -83,6 +83,11 @@ export class DataService {
     return this.data;
   }
 
+  searchArticle(keyword: string) {
+    console.log(`Search article: ${keyword}`);
+    return this.data.filter((item) => item.title.includes(keyword));
+  }
+
   deleteArticle(id: number) {
     console.log(`Delete article id: ${id}`);
   }

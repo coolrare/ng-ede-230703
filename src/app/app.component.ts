@@ -16,6 +16,8 @@ export class AppComponent implements OnInit {
   doSearch(value: string) {
     console.log(`Search keyword: ${value}`);
     this.keyword = value;
+
+    this.data = this.datasvc.searchArticle(value);
   }
 
   doDelete(id: number) {
@@ -26,6 +28,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('ngOnInit');
+
     this.data = this.datasvc.getArticles();
   }
 
