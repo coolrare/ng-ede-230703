@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   keyword = 'ng-ede-230703';
 
   doSearch(value: string) {
@@ -15,6 +15,10 @@ export class AppComponent {
 
   doDelete(id: number) {
     console.log(`Delete article id: ${id}`);
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit');
   }
 
   data = [
