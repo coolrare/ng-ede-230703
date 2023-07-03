@@ -9,7 +9,7 @@ export class HeaderComponent {
   sitename = 'Hello World';
   sitelink = 'http://blog.miniasp.com/';
   sitelogo = '/assets/images/logo.png';
-  subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
+  subtitle = '記載著 <u>Will</u> 在網路世界的學習心得與技術分享';
 
   constructor() {
     setTimeout(() => {
